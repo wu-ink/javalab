@@ -38,36 +38,36 @@ public class BusinessPerson implements Person, BeanNameAware, BeanFactoryAware, 
 
 	@Override
 	public void setBeanName(String beanName) {
-		System.out.println("【" + this.getClass().getSimpleName() + "】调用BeanNameAware的setBeanName");
+//		System.out.println("【" + this.getClass().getSimpleName() + "】调用BeanNameAware的setBeanName");
 	}
 	
 	@Override
 	public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-		System.out.println("【" + this.getClass().getSimpleName() + "】调用BeanFactoryAware的setBeanFactory");
+//		System.out.println("【" + this.getClass().getSimpleName() + "】调用BeanFactoryAware的setBeanFactory");
 	}
 	
 	@Override
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-		System.out.println("【" + this.getClass().getSimpleName() + "】调用ApplicationContextAware的setApplicationContext");
+//		System.out.println("【" + this.getClass().getSimpleName() + "】调用ApplicationContextAware的setApplicationContext");
 	}
 	
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("【" + this.getClass().getSimpleName() + "】调用InitializingBean的afterPropertiesSet");
+//		System.out.println("【" + this.getClass().getSimpleName() + "】调用InitializingBean的afterPropertiesSet");
 	}
 	
 	@PostConstruct
 	public void init() {
-		System.out.println("【" + this.getClass().getSimpleName() + "】注解@PostConstruct定义的自定义初始化方法");
+//		System.out.println("【" + this.getClass().getSimpleName() + "】注解@PostConstruct定义的自定义初始化方法");
 	}
 	
 	@PreDestroy
 	public void destroy1() {
-		System.out.println("【" + this.getClass().getSimpleName() + "】注解@PreDestroy定义的自定义销毁方法");
+//		System.out.println("【" + this.getClass().getSimpleName() + "】注解@PreDestroy定义的自定义销毁方法");
 	}
 	
 	@Override
 	public void destroy() throws Exception {
-		System.out.println("【" + this.getClass().getSimpleName() + "】 DisposableBean方法");	
+//		System.out.println("【" + this.getClass().getSimpleName() + "】 DisposableBean方法");	
 	}
 }

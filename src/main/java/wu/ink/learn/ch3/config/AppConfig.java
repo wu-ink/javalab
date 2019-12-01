@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 
 @Configuration
-@ComponentScan(basePackages = {"wu.ink.learn.ch3"}, excludeFilters = {@Filter(classes = {Service.class})}, lazyInit = true)
+@ComponentScan(basePackages = {"wu.ink.learn.ch3"}, excludeFilters = {@Filter(classes = {Service.class})})
 public class AppConfig {
 	
 	@Bean(name = "dataSource")
