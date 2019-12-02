@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"wu.ink.learn.ch3"})
-@PropertySource(value= {"classpath:jdbc.properties"}, ignoreResourceNotFound = true)
+//@PropertySource(value= {"classpath:jdbc.properties"}, ignoreResourceNotFound = true)
 public class Chapter3Main {
 	public static void main(String[] args) {
 		SpringApplication.run(Chapter3Main.class, args);

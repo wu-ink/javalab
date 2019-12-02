@@ -16,7 +16,7 @@ import wu.ink.learn.ch3.pojo.House;
 @EnableAutoConfiguration
 public class Chapter3Main2 {
 
-	@Value("${demo.login}")
+//	@Value("${demo.login}")
 	private String loginString;
 	
 	@Resource
