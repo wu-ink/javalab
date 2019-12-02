@@ -16,15 +16,12 @@ import wu.ink.learn.ch3.pojo.House;
 @EnableAutoConfiguration
 public class Chapter3Main2 {
 
-//	@Value("${demo.login}")
-	private String loginString;
-	
-	@Resource
-	private House house;
+	@Value("${demo.env}")
+	private String env;
 	
 	@RequestMapping("index")
 	public String test() {
-		return "house.name=" + house.getName();
+		return "env=" + env;
 	}
 	
 	public static void main(String[] args) {
