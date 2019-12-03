@@ -11,10 +11,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.stereotype.Service;
 
 @Configuration
 @ComponentScan(basePackages = {"wu.ink.learn.ch3"}, excludeFilters = {@Filter(classes = {Service.class})})
+@ImportResource(value = {"classpath:spring-other.xml"})
 public class AppConfig {
 	
 	@Bean(name = "dataSource", destroyMethod = "close")
