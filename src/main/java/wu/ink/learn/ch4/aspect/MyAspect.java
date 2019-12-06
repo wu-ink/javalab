@@ -7,10 +7,17 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.DeclareParents;
 import org.aspectj.lang.annotation.Pointcut;
+
+import wu.ink.learn.ch4.validator.UserValidator;
+import wu.ink.learn.ch4.validator.impl.UserValidatorImpl;
 
 @Aspect
 public class MyAspect {
+	@DeclareParents(value="wu.ink.learn.ch4.service.impl.UserServiceImpl+", defaultImpl = UserValidatorImpl.class)
+	public UserValidator userValidator;
+	
 	@Pointcut("execution(* wu.ink.learn.ch4.service.impl.UserServiceImpl.printUser(..))")
 	public void pointCut() {
 		
