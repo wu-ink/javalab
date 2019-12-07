@@ -5,9 +5,10 @@ import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.Ordered;
 
 @Aspect
-public class MyAspect2 {
+public class MyAspect2 implements Ordered {
 
 	@Pointcut("execution(* wu.ink.learn.ch4.service.impl.UserServiceImpl.manyAspects(..))")
 	public void manyAspects() {
@@ -28,5 +29,10 @@ public class MyAspect2 {
 	@AfterReturning("manyAspects()")
 	public void afterReturning() {
 		System.out.println("MyAspect2 afterReturning ...");
+	}
+
+	@Override
+	public int getOrder() {
+		return 2;
 	}
 }

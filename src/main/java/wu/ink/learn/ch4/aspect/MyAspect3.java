@@ -5,8 +5,10 @@ import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 
 @Aspect
+@Order(3)
 public class MyAspect3 {
 
 	@Pointcut("execution(* wu.ink.learn.ch4.service.impl.UserServiceImpl.manyAspects(..))")
