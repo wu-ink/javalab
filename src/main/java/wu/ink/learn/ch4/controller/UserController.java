@@ -15,6 +15,12 @@ public class UserController {
 	@Autowired
 	private UserService userService = null;
 	
+	@RequestMapping("/manyAspects")
+	public String manyAspects() {
+		userService.manyAspects();
+		return "manyAspects";
+	}
+	
 	@RequestMapping("/print")
 	@ResponseBody
 	public User printUser(Long id, String userName, String note) {

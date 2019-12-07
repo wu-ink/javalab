@@ -18,4 +18,8 @@ public class UserServiceImpl implements UserService {
 		System.out.println("\tnote = " + user.getNote());
 	}
 
+	@Override
+	public void manyAspects() {
+		System.out.println("测试多个切面顺序");
+	}
 }
